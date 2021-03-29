@@ -5,7 +5,6 @@ import cv2
 import os, time
 from PIL import Image
 from argparse import ArgumentParser
-import multiprocessing as mp
 
 
 def cai_filter(image):
@@ -56,8 +55,6 @@ def calc_sigma(image):
     sigma_0 = 9
     h = d.shape[0]
     w = d.shape[1]
-    #Wu et al.
-    #http://ws.binghamton.edu/fridrich/Research/double.pdf
     #m = the neighbourhood pixels, here the 3x3 pixels around the selected pixel
     #sum the value of the neighbourhood - the overall variance of the SPN.
     #Select the max value, so if the value is negative, it returns a black(empty) pixel
@@ -219,7 +216,8 @@ if __name__ == "__main__":
     parser.add_argument("path", help="python filter_cy Folder_Path height width (Default 256x256)")
     parser.add_argument("--height", help="python filter_cy Folder_Path height width (Default 256x256)", default= 256)
     parser.add_argument("--width", help="python filter_cy Folder_Path height width (Default 256x256)", default= 256)
-    parser.add_argument("--nocrop", help="python filter_cy Folder_Path height width (Default 256x256)", default= 0)
+    parser.add_argument("--nocrop", help="python filter_cy Folder_Path height width (Default 256x256)", dest='nocrop', action='store_true')
+    parser.set_defaults(nocrop=False)
 
     args = parser.parse_args()
     filter_main(args.path, args.height, args.width, args.nocrop)
