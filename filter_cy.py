@@ -5,6 +5,7 @@ import cv2
 import os, time
 from PIL import Image
 from argparse import ArgumentParser
+import filter_cy
 
 
 def cai_filter(image):
