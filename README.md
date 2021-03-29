@@ -35,9 +35,11 @@ theres also an average_image.py file in here which will average all the filtered
 It will be hard to spot with one image, but it becomes very clear after ~100 images.
 
 Here's an example of iphone noise:
+
 ![](iphone_example.png)
 
 Here's an example of samsung noise:
+
 ![](samsung_example.png)
 
 
