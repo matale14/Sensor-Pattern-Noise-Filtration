@@ -15,7 +15,11 @@ To setup:
 
 to run:
 
-`cython filter_cy.py`
+`cython filter_cy.py Your_path 512 512`
+
+and to run without the cython optimization:
+
+`python3 filter_cy.py Your_path 512 512`
 
 Options are as follows:
 ```
