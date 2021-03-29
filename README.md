@@ -9,15 +9,7 @@ and
 A context adaptive predictor of sensor pattern noise for camera source identification by Guangdong Wu, Xiangui Kang, and K. J. Ray Liu
 
 
-To setup:
-
-`python3 setup.py build_ext --inplace`
-
 to run:
-
-`cython filter_cy.py Your_path 512 512`
-
-and to run without the cython optimization:
 
 `python3 filter_cy.py Your_path 512 512`
 
@@ -57,5 +49,5 @@ Optimize the filter to combat artifacts, overexposure etc.
 
 Find a way to make the pattern clearer. Maybe boost the value of any pixels over x value.
 
-Maybe port to C for better performance.
+Maybe port to C for better performance. Have some Cython stuff going as well
 
